@@ -236,7 +236,11 @@ public partial class TeachingTip : ContentControl
         var popup = new Popup
         {
             // A Popup needs contents to open, so set a child that doesn't do anything.
-            Child = new Panel(),
+            Child = new Panel
+            {
+                Width = 0,
+                Height = 0,
+            },
             WindowManagerAddShadowHint = false,
             IsLightDismissEnabled = true,
             PlacementTarget = (Control)VisualRoot
